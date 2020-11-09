@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarDetailKlinik"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/bg_navigation"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ibBackButtonDetailKlinik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/back_button"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_arrow_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvActionbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/segoeui_bold"
+                    android:gravity="center"
+                    android:text="Detail Klinik"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ibBackButtonDetailKlinik"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/containerHeaderDetailKlinik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarDetailKlinik">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient2">
+
+            <TextView
+                android:id="@+id/tvnamaklinik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/segoeui_bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvidklinik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:elevation="8dp"
+                android:fontFamily="@font/segoeui_bold"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_shape2"
+                android:elevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_shape3"
+                android:elevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerHeaderDetailKlinik">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_form"
+                android:fontFamily="@font/segoeui_bold"
+                android:padding="8dp"
+                android:text="Jadwal Harian Klinik"
+                android:textColor="@color/rain"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--  View 1-->
+            <View
+                android:id="@+id/view1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/indicator_circle"
+                android:backgroundTint="@color/rain"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toStartOf="@id/view2"
+                app:layout_constraintTop_toBottomOf="@id/tvHeader" />
+
+            <TextView
+                android:id="@+id/tvDay1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_form"
+                android:fontFamily="@font/segoeui_bold"
+                android:padding="4dp"
+                android:text="SENIN"
+                android:textColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="@id/view1"
+                app:layout_constraintStart_toStartOf="@id/view1"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <TextView
+                android:id="@+id/tvsenin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_bold"
+                android:textColor="@color/rain"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvDay1"
+                app:layout_constraintStart_toStartOf="@id/tvDay1"
+                app:layout_constraintTop_toBottomOf="@id/tvDay1" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:background="@color/rain"
+                app:layout_constraintBottom_toBottomOf="@id/view3"
+                app:layout_constraintEnd_toStartOf="@id/view3"
+                app:layout_constraintTop_toTopOf="@id/view3" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/indicator_circle"
+                android:backgroundTint="@color/rain"
+                android:paddingTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/view1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/view1" />
+
+            <TextView
+                android:id="@+id/tvDay2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_form"
+                android:fontFamily="@font/segoeui_bold"
+                android:padding="4dp"
+                android:text="SELASA"
+                android:textColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="@id/view3"
+                app:layout_constraintStart_toStartOf="@id/view3"
+                app:layout_constraintTop_toBottomOf="@id/view3" />
+
+            <TextView
+                android:id="@+id/tvselasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_bold"
+                android:textColor="@color/rain"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvDay2"
+                app:layout_constraintStart_toStartOf="@id/tvDay2"
+                app:layout_constraintTop_toBottomOf="@id/tvDay2" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:background="@color/rain"
+                app:layout_constraintBottom_toBottomOf="@id/view1"
+                app:layout_constraintStart_toEndOf="@id/view3"
+                app:layout_constraintTop_toTopOf="@id/view1" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/indicator_circle"
+                android:backgroundTint="@color/rain"
+                android:paddingTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/view1"
+                app:layout_constraintStart_toEndOf="@id/view4"
+                app:layout_constraintTop_toTopOf="@id/view1" />
+
+            <TextView
+                android:id="@+id/tvDay3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_form"
+                android:fontFamily="@font/segoeui_bold"
+                android:padding="4dp"
+                android:text="RABU"
+                android:textColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="@id/view5"
+                app:layout_constraintStart_toStartOf="@id/view5"
+                app:layout_constraintTop_toBottomOf="@id/view5" />
+
+            <TextView
+                android:id="@+id/tvrabu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_bold"
+                android:textColor="@color/rain"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvDay3"
+                app:layout_constraintStart_toStartOf="@id/tvDay3"
+                app:layout_constraintTop_toBottomOf="@id/tvDay3" />
+
+            <!--  View 2-->
+            <View
+                android:id="@+id/view11"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/indicator_circle"
+                android:backgroundTint="@color/rain"
+                android:paddingTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/view22"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <TextView
+                android:id="@+id/tvDay6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_form"
+                android:fontFamily="@font/segoeui_bold"
+                android:padding="4dp"
+                android:text="SABTU"
+                android:textColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="@id/view11"
+                app:layout_constraintStart_toStartOf="@id/view11"
+                app:layout_constraintTop_toBottomOf="@id/view11" />
+
+            <TextView
+                android:id="@+id/tvsaptu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_bold"
+                android:textColor="@color/rain"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvDay6"
+                app:layout_constraintStart_toStartOf="@id/tvDay6"
+                app:layout_constraintTop_toBottomOf="@id/tvDay6" />
+
+            <View
+                android:id="@+id/view22"
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:background="@color/rain"
+                app:layout_constraintBottom_toBottomOf="@id/view11"
+                app:layout_constraintStart_toEndOf="@id/view33"
+                app:layout_constraintTop_toTopOf="@id/view11" />
+
+            <View
+                android:id="@+id/view33"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/indicator_circle"
+                android:backgroundTint="@color/rain"
+                android:paddingTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/view11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/view11" />
+
+            <TextView
+                android:id="@+id/tvDay5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_form"
+                android:fontFamily="@font/segoeui_bold"
+                android:padding="4dp"
+                android:text="JUMAT"
+                android:textColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="@id/view33"
+                app:layout_constraintStart_toStartOf="@id/view33"
+                app:layout_constraintTop_toBottomOf="@id/view33" />
+
+            <TextView
+                android:id="@+id/tvjumat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_bold"
+                android:textColor="@color/rain"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvDay5"
+                app:layout_constraintStart_toStartOf="@id/tvDay5"
+                app:layout_constraintTop_toBottomOf="@id/tvDay5" />
+
+            <View
+                android:id="@+id/view44"
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:background="@color/rain"
+                app:layout_constraintBottom_toBottomOf="@id/view11"
+                app:layout_constraintEnd_toStartOf="@id/view33"
+                app:layout_constraintTop_toTopOf="@id/view11" />
+
+            <View
+                android:id="@+id/view55"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/indicator_circle"
+                android:backgroundTint="@color/rain"
+                android:paddingTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/view11"
+                app:layout_constraintEnd_toStartOf="@id/view44"
+                app:layout_constraintTop_toTopOf="@id/view11" />
+
+            <TextView
+                android:id="@+id/tvDay4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_form"
+                android:fontFamily="@font/segoeui_bold"
+                android:padding="4dp"
+                android:text="KAMIS"
+                android:textColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="@id/view55"
+                app:layout_constraintStart_toStartOf="@id/view55"
+                app:layout_constraintTop_toBottomOf="@id/view55" />
+
+            <TextView
+                android:id="@+id/tvkamis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_bold"
+                android:textColor="@color/rain"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvDay4"
+                app:layout_constraintStart_toStartOf="@id/tvDay4"
+                app:layout_constraintTop_toBottomOf="@id/tvDay4" />
+
+            <!--  View 3-->
+            <View
+                android:id="@+id/view222"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/indicator_circle"
+                android:backgroundTint="@color/rain"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toEndOf="@id/view33"
+                app:layout_constraintStart_toStartOf="@id/view33"
+                app:layout_constraintTop_toBottomOf="@id/view11" />
+
+            <TextView
+                android:id="@+id/tvDay7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_form"
+                android:fontFamily="@font/segoeui_bold"
+                android:padding="4dp"
+                android:text="MINGGU"
+                android:textColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="@id/view222"
+                app:layout_constraintStart_toStartOf="@id/view222"
+                app:layout_constraintTop_toBottomOf="@id/view222" />
+
+            <TextView
+                android:id="@+id/tvminggu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_bold"
+                android:textColor="@color/rain"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvDay7"
+                app:layout_constraintStart_toStartOf="@id/tvDay7"
+                app:layout_constraintTop_toBottomOf="@id/tvDay7" />
+
+            <View
+                android:id="@+id/view333"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/indicator_circle"
+                android:backgroundTint="@color/rain"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toEndOf="@id/view222"
+                app:layout_constraintStart_toStartOf="@id/view222"
+                app:layout_constraintTop_toBottomOf="@id/view222" />
+
+            <TextView
+                android:id="@+id/tvDokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_form"
+                android:fontFamily="@font/segoeui_bold"
+                android:padding="4dp"
+                android:text="DOKTER"
+                android:textColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="@id/view333"
+                app:layout_constraintStart_toStartOf="@id/view333"
+                app:layout_constraintTop_toBottomOf="@id/view333" />
+
+            <TextView
+                android:id="@+id/tvdokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_bold"
+                android:textColor="@color/rain"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvDokter"
+                app:layout_constraintStart_toStartOf="@id/tvDokter"
+                app:layout_constraintTop_toBottomOf="@id/tvDokter" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

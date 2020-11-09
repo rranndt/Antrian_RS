@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgtutorial"
+        android:layout_width="240dp"
+        android:layout_height="360dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/tutorial1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:id="@+id/lvasd"
+        android:layout_alignParentLeft="true">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+        <Button
+            android:layout_width="60dp"
+            android:text="1"
+            android:id="@+id/btn1"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/cerclebackgroundpink"
+            android:layout_height="60dp" />
+        <Button
+            android:layout_width="60dp"
+            android:text="2"
+            android:id="@+id/btn2"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/cerclebackgroundpink"
+            android:layout_height="60dp" />
+        <Button
+            android:layout_width="60dp"
+            android:text="3"
+            android:id="@+id/btn3"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/cerclebackgroundpink"
+            android:layout_height="60dp" />
+        <Button
+            android:layout_width="60dp"
+            android:text="4"
+            android:id="@+id/btn4"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/cerclebackgroundpink"
+            android:layout_height="60dp" />
+        <Button
+            android:layout_width="60dp"
+            android:text="5"
+            android:id="@+id/btn5"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/cerclebackgroundpink"
+            android:layout_height="60dp" />
+        <Button
+            android:layout_width="60dp"
+            android:text="6"
+            android:id="@+id/btn6"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/cerclebackgroundpink"
+            android:layout_height="60dp" />
+        <Button
+            android:layout_width="60dp"
+            android:text="7"
+            android:id="@+id/btn7"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/cerclebackgroundpink"
+            android:layout_height="60dp" />
+        <Button
+            android:layout_width="60dp"
+            android:text="8"
+            android:id="@+id/btn8"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/cerclebackgroundpink"
+            android:layout_height="60dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvtutorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imgtutorial"
+        android:text="Klik Register jika anda belum meliliki akun, jika sudah silakan login dengan mengisi data email dan password"
+        android:layout_alignParentLeft="true" />
+</RelativeLayout>

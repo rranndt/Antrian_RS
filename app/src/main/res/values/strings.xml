@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">RS Online</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="panduan1">Tekan Register jika anda belum meliliki akun, jika sudah silakan login dengan mengisi data email dan password</string>
+    <string name="panduan2">Masukan data yang di minta aplikasi dengan benar agar proses pendaftaran mudah</string>
+    <string name="panduan3">Jika sudah mendaftar ,masukan email dan password kemudian Tekan login</string>
+    <string name="panduan4">Lakukan pendaftaran online dengan menekan menu pendaftaran online</string>
+    <string name="panduan5">Isi data calon pasien dengan benar dan jelas</string>
+    <string name="panduan6">Kemudian pilih klinik yang ingin dituju</string>
+    <string name="panduan7">Setelah pendaftaran selesai silakan tekan Informasi Antrian</string>
+    <string name="panduan8">Makan akan muncul informasi antrian saat ini dan nomor antrian anda beserta estimasi jam pelayanan</string>
+    <string name="register">Register</string>
+
+    <!--    Logo-->
+    <string name="login_screen_logo">Login Screen Logo</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="register_logo">Register Logo</string>
+
+    <!--    Login / Register Form-->
+    <string name="name">Nama Lengkap</string>
+    <string name="nik">NIK</string>
+    <string name="address">Alamat</string>
+    <string name="phone">No Telp</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <!--    Toast / Form Error-->
+    <string name="toast_not_empty">Form Ini Wajib di Isi</string>
+    <string name="email_not_valid">Pastikan Email Sudah Benar</string>
+    <string name="error_toast_login">Terjadi Kesalahan Server</string>
+    <string name="update_profil">Profil Berhasil Diperbaharui</string>
+    <string name="digit_nik">NIK Harus 16 Digit</string>
+    <string name="digit_phone">Pastikan Nomor Hp Sudah Benar</string>
+    <string name="digit_password">Password Minimal 6 Digit</string>
+    <string name="password_same">Pastikan Password Sudah Sama</string>
+
+    <!--    Login / Register-->
+    <string name="login">Masuk</string>
+    <string name="daftar_sekarang">Daftar Sekarang</string>
+    <string name="daftar">Daftar</string>
+    <string name="masuk_sekarang">Masuk Sekarang</string>
+    <string name="lupa_password">Lupa Password ?</string>
+
+    <string name="sudah_punya_akun">Sudah Punya Akun ?</string>
+    <string name="belum_punya_akun">Belum punya akun ?</string>
+
+    <string name="text_login">Masuk untuk mengambil antrian pasien</string>
+    <string name="text_register">Lengkapi form untuk pendaftaran pengguna</string>
+    <string name="form_pendaftaran">Form Daftar Akun</string>
+
+    <!--    Toast-->
+    <string name="in_development">Dalam Pengembangan</string>
+    <string name="register_success">Pendaftaran Berhasil</string>
+    <string name="register_patient_success">Pendaftaran Pasien Berhasil</string>
+    <string name="connection_on">Pastikan Tersedia Koneksi Internet</string>
+    <string name="email_duplicated">Email Telah Digunakan Sebelumnya</string>
+
+    <!--    Image Button-->
+    <string name="google_logo">Google Logo</string>
+    <string name="facebook_logo">Facebook Logo</string>
+    <string name="password_confirmation">Konfirmasi Password</string>
+
+    <!--    Button Text-->
+    <string name="get_started">Mulai</string>
+    <string name="skip">Lewati</string>
+    <string name="next">Lanjut</string>
+    <string name="loading_progress_dialog">Silahkan Tunggu…</string>
+    <string name="username">Username</string>
+    <string name="email_user">rizkianandita6@gmail.com</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Cari</string>
+    <string name="Patient_name">Nama Pasien</string>
+    <string name="id_pasien">Id Pasien</string>
+    <string name="pasien_terdaftar">Pasien Terdaftar</string>
+    <string name="back_button">Back Button</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="image_banner">Image Banner</string>
+    <string name="no_internet">No Internet</string>
+
+</resources>

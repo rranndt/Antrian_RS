@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#004445</color>
+    <color name="colorPrimaryDark">#2C7873</color>
+    <color name="colorAccent">#2C7873</color>
+    <color name="white">#FFFF</color>
+    <color name="black">#000</color>
+    <color name="bg1">#FFFF</color>
+    <color name="bg2">#f27d7d</color>
+    <color name="bg3">#e43737</color>
+    <color name="bg4">#e12020</color>
+
+    <color name="blue_black">#021c1E</color>
+    <color name="cadet_blue">#004445</color>
+    <color name="rain">#2C7873</color>
+    <color name="greenery">#6FB98F</color>
+    <color name="light_green">#DFDCA0</color>
+
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="intro_title_color">#000000</color>
+    <color name="intro_desc_color">#656565</color>
+
+    <color name="gree_moss">#8A9A5B</color>
+    <color name="green_jade">#00A86B</color>
+    <color name="gree_mint">#98FB98</color>
+    <color name="gree_russian">#679267</color>
+
+    <color name="shimmer">#dddddd</color>
+
+</resources>

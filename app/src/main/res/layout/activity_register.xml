@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivLogoRegister"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/register_logo"
+            android:src="@drawable/vc_medic_register"
+            app:layout_constraintBottom_toTopOf="@id/tvWelcomeRegister"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvWelcomeRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lambo"
+            android:text="@string/form_pendaftaran"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@id/tvWelcomeRegister2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLogoRegister" />
+
+        <TextView
+            android:id="@+id/tvWelcomeRegister2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abaya"
+            android:text="@string/text_register"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/tipNameRegister"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcomeRegister" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipNameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcomeRegister2"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNameRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_name"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipNikRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:counterEnabled="true"
+            app:counterMaxLength="16"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipNameRegister"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNikRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_nik"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/nik"
+                android:inputType="numberDecimal"
+                android:maxLength="16"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipAddressRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipNikRegister"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAddressRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_address"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/address"
+                android:inputType="text"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipPhoneRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipAddressRegister"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPhoneRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_phone"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/phone"
+                android:inputType="numberDecimal"
+                android:maxLength="13"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipEmailRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipPhoneRegister"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmailRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_email"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipEmailRegister"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/rain"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPasswordRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_password"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipPasswordConfirmationRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipPasswordRegister"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/rain"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPasswordConfirmation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_password"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/password_confirmation"
+                android:inputType="textPassword"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegister"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_button"
+            android:padding="12dp"
+            android:text="@string/daftar"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipPasswordConfirmationRegister" />
+
+        <TextView
+            android:id="@+id/tvTextAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/segoeui"
+            android:text="@string/sudah_punya_akun"
+            app:layout_constraintEnd_toStartOf="@id/tvRegisterAccount"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnRegister" />
+
+        <TextView
+            android:id="@+id/tvRegisterAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/segoeui_bold"
+            android:text="@string/masuk_sekarang"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvTextAccount"
+            app:layout_constraintTop_toBottomOf="@id/btnRegister" />
+
+        <!--  Wave 1  -->
+        <View
+            android:id="@+id/wave1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/ic_wave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRegisterAccount" />
+
+        <!--  Wave 2  -->
+        <View
+            android:id="@+id/wave2"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:alpha="0.8"
+            android:background="@drawable/ic_wave"
+            app:layout_constraintBottom_toBottomOf="@id/wave1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

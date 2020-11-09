@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rizkirian.rsantrian">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher_round"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon"
+        tools:targetApi="n">
+        <activity android:name="com.rizkirian.rsantrian.onboard.OnboardActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name="com.rizkirian.rsantrian.ui.splash.SplahScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.login.LoginActivity"
+            android:label="Login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.register.RegisterActivity"
+            android:label="Daftar" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.dashboard.DashboardActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.list_anggota_keluarga.ListAnggotaKeluargaActivity"
+            android:label="Data Keluarga" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.pilih_pasien_baru.InputPasienBaruActivity"
+            android:label="Input Pasien" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.list_klinik.ListKlinikActivity"
+            android:label="Data Klinik" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.pilih_pasien_lama.PilihPasienLamaActivity"
+            android:label="Pilih Pasien" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.pilih_pasien_baru.pilih_klinik_baru.PilihKlinikBaruActivity"
+            android:label="Pilih Klinik" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.info_antrian.InfoAntrianActivity"
+            android:label="Info Antrian" />
+        <activity android:name="com.rizkirian.rsantrian.VerifikasiPasien" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.detail_antrian.DetailAntrianActivity"
+            android:label="Detail Antrian" />
+        <activity
+            android:name="com.rizkirian.rsantrian.VerifikasiAkun"
+            android:label="Verifikasi" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.detail_klinik.DetailKlinikActivity"
+            android:label="Detail Klinik" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.panduan.BantuanActivity"
+            android:label="Bantuan" />
+        <activity
+            android:name="com.rizkirian.rsantrian.ui.update_profil.UpdateProfileActivity"
+            android:label="Update Akun" />
+        <activity
+            android:name=".ui.pilih_pasien_lama.pilih_klinik_lama.PilihKlinikLamaActivity"
+            android:label="Pilih Klinik" />
+        <activity
+            android:name="com.rizkirian.rsantrian.PanduanActivity"
+            android:label="Panduan" />
+    </application>
+
+</manifest>

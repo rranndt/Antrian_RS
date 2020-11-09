@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarSize="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbarProfil"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_margin="8dp"
+                android:background="@color/white"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/bg_navigation"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/ibBackButtonUpdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/back_button"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_arrow_back"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvActionbarTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/segoeui_bold"
+                            android:gravity="center"
+                            android:text="Profil Pengguna"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ibBackButtonUpdate"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivLogoRegister"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="32dp"
+                android:contentDescription="@string/register_logo"
+                android:src="@drawable/img_blank"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appbarProfil" />
+
+            <ImageButton
+                android:id="@+id/ibButtonAddPhoto"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_add80px"
+                app:layout_constraintBottom_toBottomOf="@id/ivLogoRegister"
+                app:layout_constraintEnd_toEndOf="@id/ivLogoRegister"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipNameUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/LoginRegister"
+                app:boxStrokeColor="@color/rain"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivLogoRegister"
+                app:placeholderTextColor="@color/rain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNameUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_form"
+                    android:drawableStart="@drawable/focused_name"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/segoeui"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/rain" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipNikUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/LoginRegister"
+                app:boxStrokeColor="@color/rain"
+                app:counterEnabled="true"
+                app:counterMaxLength="16"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tipNameUpdate"
+                app:placeholderTextColor="@color/rain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNikUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_form"
+                    android:drawableStart="@drawable/focused_nik"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/segoeui"
+                    android:hint="@string/nik"
+                    android:inputType="numberDecimal"
+                    android:maxLength="16"
+                    android:paddingHorizontal="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/rain" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipAddressUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/LoginRegister"
+                app:boxStrokeColor="@color/rain"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tipNikUpdate"
+                app:placeholderTextColor="@color/rain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtAddressUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_form"
+                    android:drawableStart="@drawable/focused_address"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/segoeui"
+                    android:hint="@string/address"
+                    android:inputType="text"
+                    android:paddingHorizontal="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/rain" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipPhoneUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/LoginRegister"
+                app:boxStrokeColor="@color/rain"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tipAddressUpdate"
+                app:placeholderTextColor="@color/rain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPhoneUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_form"
+                    android:drawableStart="@drawable/focused_phone"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/segoeui"
+                    android:hint="@string/phone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="13"
+                    android:paddingHorizontal="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/rain" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipEmailUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/LoginRegister"
+                app:boxStrokeColor="@color/rain"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tipPhoneUpdate"
+                app:placeholderTextColor="@color/rain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmailUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_form"
+                    android:drawableStart="@drawable/focused_email"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/segoeui"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:paddingHorizontal="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/rain" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipPasswordUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/LoginRegister"
+                app:boxStrokeColor="@color/rain"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tipEmailUpdate"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/rain"
+                app:placeholderTextColor="@color/rain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPasswordUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_form"
+                    android:drawableStart="@drawable/focused_password"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/segoeui"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/rain" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tipPasswordConfirmationUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:theme="@style/LoginRegister"
+                app:boxStrokeColor="@color/rain"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/rain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tipPasswordUpdate"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/rain"
+                app:placeholderTextColor="@color/rain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPasswordConfirmationUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_form"
+                    android:drawableStart="@drawable/focused_password"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/segoeui"
+                    android:hint="@string/password_confirmation"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/rain" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_button"
+                android:padding="12dp"
+                android:text="Ubah"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tipPasswordConfirmationUpdate" />
+
+            <!--  Wave 1  -->
+            <View
+                android:id="@+id/wave1"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/ic_wave"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnUpdate" />
+
+            <!--  Wave 2  -->
+            <View
+                android:id="@+id/wave2"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:alpha="0.8"
+                android:background="@drawable/ic_wave"
+                app:layout_constraintBottom_toBottomOf="@id/wave1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="196dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="241dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

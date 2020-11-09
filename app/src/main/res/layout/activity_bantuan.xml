@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tes"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/bg_navigation"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ibBackButtonPanduan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/back_button"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_arrow_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvActionbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/segoeui_bold"
+                    android:gravity="center"
+                    android:text="Panduan"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ibBackButtonPanduan"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/indicator_circle"
+        android:backgroundTint="@color/rain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tes" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:background="@color/rain"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/indicator_circle"
+        android:backgroundTint="@color/rain"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:background="@color/rain"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view3" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/indicator_circle"
+        android:backgroundTint="@color/rain"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view4" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:background="@color/rain"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view5" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/indicator_circle"
+        android:backgroundTint="@color/rain"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view6" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:background="@color/rain"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view7" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/indicator_circle"
+        android:backgroundTint="@color/rain"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view8" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:background="@color/rain"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view9" />
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/indicator_circle"
+        android:backgroundTint="@color/rain"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view10" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/segoeui"
+        android:justificationMode="inter_word"
+        android:text="Pilih menu 'Pendaftaran Online' untuk mendaftarkan diri sebagai calon pasien"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/tes"
+        app:layout_constraintTop_toTopOf="@id/view1" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/segoeui"
+        android:justificationMode="inter_word"
+        android:text="Jika calon pasien sudah pernah mendaftarkan diri sebelumnya maka dapat memilih tombol 'Pasien Lama', jika belum makan pilih 'Pasien Baru"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view3"
+        app:layout_constraintTop_toTopOf="@id/view3" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/segoeui"
+        android:justificationMode="inter_word"
+        android:text="Masukan data diri calon pasien pada form yang sudah disediakan, harap untuk di isi dengan benar agar data dapat di verifikasi"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view5"
+        app:layout_constraintTop_toTopOf="@id/view5" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/segoeui"
+        android:justificationMode="inter_word"
+        android:text="Setelah mengisi form data diri selanjutnya calon pasien untuk memilih klinik mana yang akan dituju"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/view7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view7"
+        app:layout_constraintTop_toTopOf="@id/view7" />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/segoeui"
+        android:justificationMode="inter_word"
+        android:text="Untuk mengecek nomor antrian, calon pasien dapat masuk ke menu 'Informasi Antrian'"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/view9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view8"
+        app:layout_constraintTop_toTopOf="@id/view9" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/segoeui"
+        android:justificationMode="inter_word"
+        android:text="Pastikan pengguna sudah mendapatkan nomor antrian dan pastikan calon pasien untuk dapat datang lebih awal dari jam yang sudah ditentukan"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/view11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view11"
+        app:layout_constraintTop_toTopOf="@id/view11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

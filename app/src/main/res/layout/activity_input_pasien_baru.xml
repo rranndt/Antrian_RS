@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarDaftarPasienBaru"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/bg_navigation"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/ibBackButtonDaftarPasienBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/back_button"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_arrow_back"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvActionbarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/segoeui_bold"
+                        android:gravity="center"
+                        android:text="Pendaftaran Pasien Baru"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ibBackButtonDaftarPasienBaru"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/tvIduser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="asas"
+            android:visibility="gone" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipNameDaftarPasien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbarDaftarPasienBaru"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNameRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_name"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/name"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipNikDaftarPasien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:counterEnabled="true"
+            app:counterMaxLength="16"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipNameDaftarPasien"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNikRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_nik"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/nik"
+                android:inputType="numberDecimal"
+                android:maxLength="16"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvJenisKelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/segoeui"
+            android:text="Jenis Kelamin"
+            android:textColor="@color/rain"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipNikDaftarPasien" />
+
+        <Spinner
+            android:id="@+id/sp_jeniskelamin"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_form"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvJenisKelamin" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiptipInputTglLahir"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toStartOf="@id/btntgl_lahir"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sp_jeniskelamin"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_tgl_lahir"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_nik"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="Tanggal Lahir"
+                android:inputType="datetime"
+                android:maxLength="16"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btntgl_lahir"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:drawableStart="@drawable/ic_jadwal"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            app:drawableTint="@color/rain"
+            app:layout_constraintBottom_toBottomOf="@id/tiptipInputTglLahir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tiptipInputTglLahir" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipAddressDaftarPasien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tiptipInputTglLahir"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAddressRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_address"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/address"
+                android:inputType="textEmailAddress"
+                android:maxLength="13"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipPhoneDaftarPasien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/LoginRegister"
+            app:boxStrokeColor="@color/rain"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/rain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipAddressDaftarPasien"
+            app:placeholderTextColor="@color/rain">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPhoneRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_form"
+                android:drawableStart="@drawable/focused_phone"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/segoeui"
+                android:hint="@string/phone"
+                android:inputType="numberDecimal"
+                android:maxLength="13"
+                android:paddingHorizontal="8dp"
+                android:singleLine="true"
+                android:textColor="@color/rain" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegister"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_button"
+            android:elevation="4dp"
+            android:padding="12dp"
+            android:text="@string/daftar"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipPhoneDaftarPasien" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
